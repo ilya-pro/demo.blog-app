@@ -1,17 +1,13 @@
 import React, {Suspense,} from 'react';
 import {Routes, Link, Route} from 'react-router-dom';
-// import {Counter} from "./components/Counter";
 import './styles/index.scss';
-//import MainPage from "./pages/MainPage/MainPage";
-//import AboutPage from "./pages/AboutPage/AboutPage";
-import AboutPageAsync from "./pages/AboutPage/AboutPage.async";
-import MainPageAsync from "./pages/MainPage/MainPage.async";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
+import {AboutPage} from "pages/AboutPage";
+import {MainPageAsync} from "pages/MainPage";
+import {useTheme} from "app/providers/ThemeProvider";
+import {classNames} from "shared/lib/classNames/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
-    //`app ${theme}`
     return (
         <div className={classNames('app', {}, [theme])}>
             Some text
@@ -22,11 +18,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<MainPageAsync/>}>
                     </Route>
-                    <Route path="/about" element={<AboutPageAsync/>}>
+                    <Route path="/about" element={<AboutPage/>}>
                     </Route>
                 </Routes>
             </Suspense>
-            {/*<Counter/>*/}
         </div>
     );
 };

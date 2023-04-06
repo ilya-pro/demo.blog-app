@@ -142,4 +142,44 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * `git init`
 * `git remote add origin git@github.com:ilya-pro/demo.blog-app.git`
 
+# 1.9 FSD Introduce
+
+# 1.10 Architecture
+* add `src/shared`, `src/entities`, `src/features`, `src/widgets`,  `src/app`
+* move `App.tsx` to `src/app`
+* move `styles` to `src/app`
+* add `src/app/types`
+* move `Global.d.ts` to `src/app/types`
+* del `components`
+* add `src/app/providers`
+* add `src/app/providers/ThemeProvider`
+* add `src/app/providers/ThemeProvider/ui`
+* move `ThemeProvider.tsx` to `src/app/providers/ThemeProvider/ui`
+* add `src/app/providers/ThemeProvider/index.tsx` for public export
+* add `src/shared/config`
+* add `src/app/providers/ThemeProvider/lib`
+* move `theme/useTheme.ts` to `src/app/providers/ThemeProvider/lib`
+* del `src/theme`
+* `tsconfig.json` uncomment `"baseUrl": ".",` and
+  add 
+  ```
+  "paths": {
+     "*": ["./src/*"]
+  }
+  ```
+  for absolute imports
+* fix imports to absolute were needed
+* move `ThemeContext.ts` to `src/app/providers/ThemeProvider/lib`
+* `config/build/buildResolvers.ts` add 
+  ```
+        preferAbsolute: true,
+        modules: [options.paths.src, 'node_modules'],
+        mainFiles: ['index'],
+        alias: {},
+  ```
+  documentation: [webpack resolvemodules](https://webpack.js.org/configuration/resolve/#resolvemodules)
+* reorganize `pages` (add `ui` folders and `index.tsx` files)
+* move `src/helpers/classNames/classNames.ts` to `shared/lib`
+* del `src/helpers`
+
 -- TODO --

@@ -8,4 +8,4 @@ const MainPageAsync = lazy(() => new Promise(resolve => {
     }, 1500)
 }));
 
-export default MainPageAsync;
+export {MainPageAsync};
