@@ -182,4 +182,11 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * move `src/helpers/classNames/classNames.ts` to `shared/lib`
 * del `src/helpers`
 
+# 2.11 AppRouter + router config
+* add `src/app/providers/router/ui`
+* add `src/app/providers/router/ui/AppRouter.tsx` + use it in the `App`
+* add `src/shared/config/routeConfig`
+* add `src/shared/config/routeConfig/routeConfig.tsx`
+* use `routeConfig` in `AppRouter`
+
 -- TODO --
