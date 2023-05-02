@@ -189,4 +189,8 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * add `src/shared/config/routeConfig/routeConfig.tsx`
 * use `routeConfig` in `AppRouter`
 
+# 2.12 Navbar + First UI Kit component
+* add `src/widgets/Navbar` + ui + styles + index.ts
+* add `src/shared/ui/AppLink/AppLink.tsx` + styles
+
 -- TODO --
