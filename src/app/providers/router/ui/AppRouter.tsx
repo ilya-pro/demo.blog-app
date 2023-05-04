@@ -12,7 +12,11 @@ export const AppRouter = () => {
                     <Route
                         key={key}
                         path={path}
-                        element={element}>
+                        element={(
+                            <div className="page-wrapper">
+                                {element}
+                            </div>
+                        )}>
                     </Route>
                 ))}
                 {/*<Route path="/" element={<MainPageAsync/>}>

@@ -206,4 +206,9 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * change ThemeProvider export for use it from public api
 * add `src/shared/ui/Button`
 
+# 2.14 Sidebar. Layout
+* add `src/widgets/Sidebar/ui/Sidebar` etc
+* `src/app/styles/index.scss` add `content-page` style
+* move ThemeSwitcher to Sidebar
+
 -- TODO --
