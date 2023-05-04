@@ -193,4 +193,17 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * add `src/widgets/Navbar` + ui + styles + index.ts
 * add `src/shared/ui/AppLink/AppLink.tsx` + styles
 
+# 2.13 SVG loader. File loader Button UI kit
+* add `src/shared/ui/ThemeSwitcher`
+* add `src/shared/assets/icons` and put svg's and png icons
+* `npm install @svgr/webpack@6.2.1 --save-dev`
+* `config/build/buildLoaders.ts` add svgLoader
+* `src/app/types/Global.d.ts` add `declare module "*.svg" { ... }`
+* `npm install file-loader@6.2.0 -D`
+* `config/build/buildLoaders.ts` add fileLoader
+* `src/app/types/Global.d.ts` add `declare module "*.png";`
+* import svg to ThemeSwitcher
+* change ThemeProvider export for use it from public api
+* add `src/shared/ui/Button`
+
 -- TODO --
