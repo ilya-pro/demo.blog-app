@@ -7,5 +7,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         open: true,
         // for redirect working after reload page on some, like /about
         historyApiFallback: true,
+        // scss reloaded without it option, but react component needed it
+        hot: true
     }
 }

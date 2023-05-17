@@ -228,4 +228,12 @@ https://react.i18next.com/
 * add `src/shared/ui/LangSwitcher` component
 * WebStorm. instal plugin `I18n Support` (Settings/Plugins/Marketplace - use search)
 
+# 2.16 Webpack hot module replacement
+Note: webpack 5 work well for change SCSS without add `hot` option and `HotModuleReplacementPlugin`
+https://www.npmjs.com/package/@pmmmwh/react-refresh-webpack-plugin
+* `config/build/buildPlugins.ts` add `new webpack.HotModuleReplacementPlugin()`
+* `config/build/buildDevServer.ts` add `hot: true`
+Additional, for HMR for React Components
+* `npm install -D @pmmmwh/react-refresh-webpack-plugin@0.5.5 react-refresh@0.12.0`
+
 -- TODO --
