@@ -211,4 +211,21 @@ Note: https://webpack.js.org/guides/getting-started/#using-a-configuration
 * `src/app/styles/index.scss` add `content-page` style
 * move ThemeSwitcher to Sidebar
 
+# 2.15 i18n. Define plugin
+Note:
+https://react.i18next.com/
+* `npm install i18next@21.6.11 react-i18next@11.15.5 --save`
+* `npm install i18next-http-backend@1.3.2 i18next-browser-languagedetector@6.1.3 --save`
+* add `src/shared/config/i18n/i18n.ts` and put example from https://react.i18next.com/latest/using-with-hooks#configure-i18next
+* `config/build/buildPlugins.ts` add DefinePlugin with `__IS_DEV__` flag
+* `src/shared/config/i18n/i18n.ts` set `degug: __IS_DEV__`
+* `src/app/types/Global.d.ts` add `declare const __IS_DEV__: boolean` for TS
+* add `public/locales/en/translation.json` and `public/locales/ru/translation.json`
+* `src/index.tsx` add `import "shared/config/i18n/i18n";`
+* add l18n for `AboutPage` and `MainPage`
+* add `public/locales/en/about.json` and `public/locales/ru/about.json` for AboutPage
+* add `public/locales/ru/main.json` and `public/locales/en/main.json`
+* add `src/shared/ui/LangSwitcher` component
+* WebStorm. instal plugin `I18n Support` (Settings/Plugins/Marketplace - use search)
+
 -- TODO --
