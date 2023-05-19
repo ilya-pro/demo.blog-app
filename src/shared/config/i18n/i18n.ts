@@ -18,7 +18,7 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         // if enabled, will load always (for any language)
-        //fallbackLng: 'ru',
+        // fallbackLng: 'ru',
         fallbackLng: false,
         debug: __IS_DEV__,
 
@@ -27,7 +27,7 @@ i18n
         },
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json',
-        }
+        },
     });
 
 export default i18n;

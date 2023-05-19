@@ -236,4 +236,42 @@ https://www.npmjs.com/package/@pmmmwh/react-refresh-webpack-plugin
 Additional, for HMR for React Components
 * `npm install -D @pmmmwh/react-refresh-webpack-plugin@0.5.5 react-refresh@0.12.0`
 
+# 2.17 Babel. Extract plugin (skipped)
+
+# 2.18 EsLint + fix bugs
+* `npm install --save-dev eslint@8.10.0`
+* `npm init @eslint/config` -> Y -> 
+select ` To check syntax, find problems, and enforce code style` ->
+select `JavaScript modules (import/export)`
+select `React`
+TypeScript?: `Yes`
+run in: `Browser`
+`Use a popular style guide`
+!!! `Standard` Instead of `Airbnb`
+format: `JavaScript`
+install eslint plugins: `yes`
+`npm`
+---
+Additional
+* Manually change eslint-* modules version
+```
+  "eslint": "^8.10.0",
+  "eslint-config-airbnb": "^19.0.4",
+  "eslint-plugin-i18next": "^5.1.2",
+  "eslint-plugin-import": "^2.25.4",
+  "eslint-plugin-jsx-a11y": "^6.5.1",
+  "eslint-plugin-react": "^7.29.2",
+  "eslint-plugin-react-hooks": "^4.3.0",
+```
+return version of Typescript
+`"typescript": "^4.5.5",`
+* npm install for update npm-modules
+* `.eslintrc.js` change `standard-with-typescript` to `airbnb`
+* `.eslintrc.js` add  `parser: '@typescript-eslint/parser',` (after `extends: [...]`)
+---
+* WebStorm. Search `eslint` -> Select `Automatic ESLint configuration`
+-> check in `Run eslint --fix on save` -> OK
+* add `rules` in
+6:45
+
 -- TODO --

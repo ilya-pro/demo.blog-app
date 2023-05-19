@@ -1,5 +1,5 @@
-import {BuildOptions} from "./types/config";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import { BuildOptions } from './types/config';
 
 export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     return {
@@ -8,6 +8,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         // for redirect working after reload page on some, like /about
         historyApiFallback: true,
         // scss reloaded without it option, but react component needed it
-        hot: true
-    }
+        hot: true,
+    };
 }
