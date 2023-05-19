@@ -10,7 +10,8 @@ function App() {
     const { theme } = useTheme();
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="loading...">
+            {/* loading... */}
+            <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />

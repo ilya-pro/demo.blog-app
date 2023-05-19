@@ -271,7 +271,18 @@ return version of Typescript
 ---
 * WebStorm. Search `eslint` -> Select `Automatic ESLint configuration`
 -> check in `Run eslint --fix on save` -> OK
-* add `rules` in
-6:45
+* add `rules` in `.eslintrc.js`
+
+# 2.19 Stylelint. Plugin for i18next
+Note:
+https://stylelint.io/user-guide/get-started/
+https://github.com/edvardchen/eslint-plugin-i18next
+* `npm install --save-dev stylelint@14.5.3 stylelint-config-standard-scss@3.0.0`
+* add `.stylelintrc.json` with `"extends": "stylelint-config-standard-scss"`
+* WebStorm. Search `stylelint` -> enable + `{**/*,*}.{css}` to `{**/*,*}.{scss}`
+* `npm install eslint-plugin-i18next@5.1.2 -D`
+* `.eslintrc.js` in plugins add `i18next`
+* `.eslintrc.js` in extends add `plugin:i18next/recommended`
+* `.eslintrc.js` in rules add `'i18next/no-literal-string': ['error', { markupOnly: true }],`
 
 -- TODO --

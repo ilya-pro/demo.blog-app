@@ -7,6 +7,7 @@ module.exports = {
         'plugin:react/recommended',
         // 'standard-with-typescript'
         'airbnb',
+        'plugin:i18next/recommended',
     ],
     // for fix `ESLint: Parsing error: Unexpected token Mods` in classNames
     parser: '@typescript-eslint/parser',
@@ -21,6 +22,8 @@ module.exports = {
     },
     plugins: [
         'react',
+        '@typescript-eslint',
+        'i18next',
     ],
     rules: {
         indent: [2, 4],
@@ -41,6 +44,7 @@ module.exports = {
         // ! important for safety
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
     },
     globals: {
         __IS_DEV__: true,
