@@ -285,4 +285,27 @@ https://github.com/edvardchen/eslint-plugin-i18next
 * `.eslintrc.js` in extends add `plugin:i18next/recommended`
 * `.eslintrc.js` in rules add `'i18next/no-literal-string': ['error', { markupOnly: true }],`
 
+# 2.20 Jest + first test
+`npm install --save-dev jest@^27.5.1`
+fo working `describe` in tests
+`npm install --save-dev @types/jest@^27.4.1`
+`jest --init` -> 1. ...package.json: Yes; 2. TS: Yes; 3. jsdom 4. Coverage: No 
+5. babel; 6. auto-clear mocks: Yes/ -> jest.config.ts created
+* move `jest.config.ts` to `config/jest/jest.config.ts`
+* `config/jest/jest.config.ts`
+  * uncomment some options
+  * change `rootDir` to `../../`
+  * change `testMatch`
+* `package.json` change test command (add path to jest config)
+* add `src/shared/lib/classNames/classNames.test.ts`
+* `.eslintrc.js` in `env` add `jest: true,` for describe in tests
+
+* For working with imports in TS
+Note: [https://jestjs.io/docs/getting-started#using-typescript]
+
+`npm install --save-dev @babel/preset-typescript@^7.16.7`
+For jest working
+* `npm install --save-dev babel-loader@^8.2.3 @babel/core@^7.17.5`
+* add `babel.config.json` with `"presets": ["@babel/preset-env"]`
+* `npm install --save-dev @babel/preset-env@^7.16.11` 
 -- TODO --
